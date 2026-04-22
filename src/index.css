@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Grotesk", ui-monospace, SFMono-Regular, monospace;
+
+  /* Clay inspired colors */
+  --color-warm-cream: #faf9f7;
+  --color-oat-border: #dad4c8;
+  --color-oat-light: #eee9df;
+  --color-warm-charcoal: #55534e;
+  --color-warm-silver: #9f9b93;
+  
+  /* Swatches */
+  --color-matcha-300: #84e7a5;
+  --color-matcha-600: #078a52;
+  --color-matcha-800: #02492a;
+  --color-slushie-500: #3bd3fd;
+  --color-slushie-800: #0089ad;
+  --color-lemon-400: #f8cc65;
+  --color-lemon-500: #fbbd41;
+  --color-ube-300: #c1b0ff;
+  --color-ube-800: #43089f;
+  --color-pomegranate-400: #fc7981;
+  --color-blueberry-800: #01418d;
+
+  /* Custom Radii */
+  --radius-card: 24px;
+  --radius-hero: 40px;
+
+  /* Custom Shadows */
+  --shadow-clay: 0 4px 0 0 rgba(0,0,0,0.05), inset 0 2px 0 0 rgba(255,255,255,0.5);
+  --shadow-hard: -7px 7px 0 0 #000000;
+}
+
+@layer base {
+  body {
+    @apply bg-warm-cream font-sans antialiased text-black;
+  }
+}
+
+@layer components {
+  .btn-clay {
+    @apply relative transition-all duration-300 ease-out border border-black rounded-full px-6 py-3 font-medium active:scale-95;
+  }
+  
+  .btn-clay-hover {
+    @apply hover:-translate-y-1 hover:rotate-[-2deg] hover:shadow-hard;
+  }
+  
+  .card-clay {
+    @apply bg-white border border-oat-border rounded-card p-8 shadow-clay transition-all duration-300;
+  }
+  
+  .card-clay-hover {
+    @apply hover:-translate-y-2 hover:rotate-[-1deg] hover:shadow-hard;
+  }
+}
